@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piramal Finance</title>
+    <title>SMG CARS</title>
     <link rel="stylesheet" href="style.css"> <!-- Assuming style.css contains your custom styles -->
     <style>
         /* Add any additional styles here if needed */
@@ -15,6 +15,7 @@
         }
         .contact-container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -30,12 +31,18 @@
             margin-bottom: 20px;
         }
         .contact-inputs {
-            width: 100%;
+            width: calc(100% - 20px); /* Adjust width minus padding */
             padding: 10px;
             margin-bottom: 10px;
             box-sizing: border-box;
             border: 1px solid #ccc; /* Example border color */
             border-radius: 4px; /* Example border radius */
+            font-size: 16px; /* Example font size */
+        }
+        .contact-label {
+            font-weight: bold; /* Example: Make label text bold */
+            display: block;
+            margin-bottom: 5px;
         }
         button[type="submit"] {
             width: 100%;
@@ -49,29 +56,48 @@
         button[type="submit"]:hover {
             background-color: #0056b3; /* Example hover color */
         }
+
+        .logo{
+            width: 250px;
+            height: 250px;
+            margin-top: 100px;
+        }
     </style>
 </head>
 <body>
     <div class="contact-container">
+       
+     
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
             <div class="contact-left-title">
-                <h2>Fill the Details for Your Loan </h2>
+         
+                <h2>Personal Information / ಪರ್ಸನಲ್ ಇನ್ಫರ್ಮೇಷನ್ </h2>
                 <hr>
             </div>
             <!-- Replace with your actual access key -->
-            <input type="hidden" name="access_key" value="52cd516a-ed65-4f1d-a54b-c63807fdef60">
+            <input type="hidden" name="access_key" value="92ee3dfb-2668-4268-a544-8ac585005c0c">
 
-            <input type="text" name="name" placeholder="Name as per Pancard / ಹೆಸರು" class="contact-inputs" required><br>
-            <input type="text" name="name" placeholder="Father Name as per Pancard / ತಂದೆಯ ಹೆಸರು" class="contact-inputs" required><br>
-            <input type="email" name="email" placeholder="enter Your Email" class="contact-inputs" required><br>
-            <input type="" name="number" placeholder="enter Your number" class="contact-inputs" required><br>
-            <textarea name="message" placeholder="current location" class="contact-inputs" required></textarea><br>
-            <select name="loan amount" id=""></select>
-<tr><td>
-    <input type="file">
-</td></tr>
-            <td></td>
-            
+            <label for="fullname" class="contact-label">Full Name (as per Pancard) / ಹೆಸರು </label>
+            <input type="text" id="fullname" name="fullname" class="contact-inputs" required>
+
+            <label for="fathername" class="contact-label">Father's Name (as per Pancard) / ತಂದೆಯ ಹೆಸರು </label>
+            <input type="text" id="fathername" name="fathername" class="contact-inputs" required>
+
+            <label for="dob" class="contact-label">Date of Birth / ಹುಟ್ಟಿದ ದಿನಾಂಕ </label>
+            <input type="date" id="dob" name="dob" class="contact-inputs" required>
+
+            <label for="email" class="contact-label">E-mail / ಇ-ಮೇಲ್</label>
+            <input type="email" id="email" name="email"  class="contact-inputs" required>
+
+            <label for="phone" class="contact-label">Phone Number / ಮೊಬೈಲ್ ಸಂಖ್ಯೆ </label>
+            <input type="tel" id="phone" name="phone"  class="contact-inputs" required>
+
+            <label for="pan" class="contact-label">PAN Number / ಪಾನ್ ಸಂಖ್ಯೆ</label>
+            <input type="text" id="pan" name="pan" class="contact-inputs" required>
+
+            <label for="pincode" class="contact-label">Pin Code / ಪಿನ್ ಕೋಡ್</label>
+            <input type="text" id="pincode" name="pincode"   class="contact-inputs" required>
+
             <button type="submit">Submit</button>
         </form>
         <div class="contact-right">
